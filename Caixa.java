@@ -5,20 +5,21 @@ import java.util.Scanner;
 public class Caixa {
 
 	public static void main(String[] args) {
-		String sacarDnv;
-		Notas n = new Notas();
+
 		Scanner sc = new Scanner(System.in);
-		Integer notaUm = 1;
-		Integer notaDois = 2;
-		Integer notaCinco = 5;
-		Integer notaDez = 10;
-		Integer notaVinte = 20;
-		Integer notaCinquenta = 50;
-		Integer notaCem = 100;
-		Integer valor;
+		Notas n = new Notas();
+		String sacarDnv;
 
 		do { 
-			valor = new Valor();
+			Integer notaUm = 1;
+			Integer notaDois = 2;
+			Integer notaCinco = 5;
+			Integer notaDez = 10;
+			Integer notaVinte = 20;
+			Integer notaCinquenta = 50;
+			Integer notaCem = 100;
+			Integer valor;
+
 			n.listarNotas();
 			System.out.println("Insira o valor que deseja retirar");
 			valor = sc.nextInt();
@@ -129,3 +130,4 @@ public class Caixa {
 		} while(sacarDnv.equalsIgnoreCase("s"));
 	}
 }
+
