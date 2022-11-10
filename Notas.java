@@ -78,7 +78,7 @@ public class Notas {
 	public void setSaldoCem(Integer saldoCem) {
 		this.saldoCem = saldoCem;
 	}
-	
+
 	public void listarNotas() {
 		System.out.println("==============================");
 		System.out.println("NOTAS NO CAIXA");
