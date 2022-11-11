@@ -41,7 +41,7 @@ public class Caixa {
 				}
 			}
 
-			if(valor >= notaCinquenta && n.getSaldoCinquenta() >= notaCinquenta) {
+			if(valor >= notaCinquenta && n.getSaldoCinquenta() >= valor/50) {
 				notaCinquenta = valor / notaCinquenta;
 				valor = valor % 50;
 				//				if(notaCinquenta >= 0) {
@@ -50,14 +50,12 @@ public class Caixa {
 				//					n.setSaldoCinquenta(n.saldoCinquenta);
 				//				}
 				if(notaCinquenta != 1)
-					notaCinquenta = valor / notaCinquenta;
-				valor = valor % 50;
-				System.out.println(notaCinquenta + " notas de R$ 50,00");
+					System.out.println(notaCinquenta + " notas de R$ 50,00");
 				n.saldoCinquenta = n.saldoCinquenta - notaCinquenta;
 				n.setSaldoCinquenta(n.saldoCinquenta);
 			}
 
-			if(valor >= notaVinte && n.getSaldoVinte() >= notaVinte) {
+			if(valor >= notaVinte && n.getSaldoVinte() >= valor/20) {
 				notaVinte = valor / notaVinte;
 				valor = valor % 20;
 				//				if(notaVinte != 0) {
@@ -70,7 +68,7 @@ public class Caixa {
 				n.setSaldoVinte(n.saldoVinte);
 			}
 
-			if(valor >= notaDez && n.getSaldoDez() >= notaDez) {
+			if(valor >= notaDez && n.getSaldoDez() >= valor/10) {
 				notaDez = valor / notaDez;
 				valor = valor % 10;
 				//				if(notaDez != 1) {
@@ -83,7 +81,7 @@ public class Caixa {
 				n.setSaldoDez(n.saldoDez);
 			}
 
-			if(valor >= notaCinco && n.getSaldoCinco() >= notaCinco) {
+			if(valor >= notaCinco && n.getSaldoCinco() >= valor/5) {
 				notaCinco = valor / notaCinco;
 				valor = valor % 5;
 				//				if(notaCinco == 1) {
@@ -96,7 +94,7 @@ public class Caixa {
 				n.setSaldoCinco(n.saldoCinco);
 			}
 
-			if(valor >= notaDois && n.getSaldoDois() >= notaDois) {
+			if(valor >= notaDois && n.getSaldoDois() >= valor/2) {
 				notaDois = valor / notaDois;
 				valor = valor % 2;
 				//				if(notaDois == 1) {
@@ -110,7 +108,7 @@ public class Caixa {
 
 			}
 
-			if(valor >= notaUm && n.getSaldoUm() >= notaUm) {
+			if(valor >= notaUm && n.getSaldoUm() >= valor/1) {
 				notaUm = valor / notaUm;
 				valor = valor % 1;
 				//				if(notaUm == 1) {
@@ -130,4 +128,3 @@ public class Caixa {
 		} while(sacarDnv.equalsIgnoreCase("s"));
 	}
 }
-
